@@ -66,12 +66,16 @@
                             <li class="menu-item-has-children">
                                 <a href="#">blog</a>
 
+
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="about.html">about Us</a>
+                                <a href="{{route("about")}}">about Us</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="contact.html"> Contact Us</a> 
+                                <a href="{{route("contact")}}"> Contact Us</a> 
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="{{route("blog")}}"> Contact Us</a> 
                             </li>
                                 </ul>
                     </div>
@@ -146,13 +150,47 @@
                         <div class="header_account_area">
                             <div class="header_account_list register">
                                 <ul>
-                                    <li><a href="login.html">Register</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="login.html">Login</a></li>
+                                    @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+                            
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                                 </ul>
                             </div>
                             <div class="header_account_list header_wishlist">
-                                <a href="wishlist.html"><span class="lnr lnr-heart"></span> <span class="item_count">3</span> </a>
+                                
+                                @auth
+                               @php
+                                    $id=\Auth::id()
+                               @endphp
+                                 <a href="{{route('wishlist')}}"><span class="lnr lnr-heart"></span> <span class="item_count">{{ $wishlist= App\Models\WishList::where("user_id",$id)->count() }} </span> </a>
+                                @endauth
                             </div>
                             <div class="header_account_list  mini_cart_wrapper">
                                <a href="{{route('cart.show')}}"><span class="lnr lnr-cart"></span><span class="item_count"> {{ session()->has('cart') ? session()->get('cart')->totalQty : '0' }}</span></a>
@@ -229,11 +267,14 @@
                         <div class="main_menu  menu_two color_two menu_position"> 
                             <nav>  
                                 <ul>
-                                    <li><a class="active"  href="{{route("landing")}}">home<i class="fa fa-angle-down"></i></a> </li>
-                                    <li class="mega_items"><a href="{{route("shop.index")}}">shop<i class="fa fa-angle-down"></i></a>  </li>
-                                    <li><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
-                                    <li><a href="contact.html"> Contact Us</a></li>
-
+                                    <li><a class="active"  href="{{route("landing")}}">  ACCUEIL</a> </li>
+                                    <li class="mega_items"><a href="{{route("shop.index")}}">BOUTIQUE</a>  </li>
+                                   
+                                    <li><a href="{{route("contact")}}">   CONTACTEZ-NOUS   </a></li>                                
+                                    <li><a href="{{route("about")}}"> NOTRE COOPÉRATIVE</a></li>
+                                    <li><a href="{{route("blog")}}">blog</a></li>
+                                   
+                                    
                                 </ul>  
                             </nav> 
                         </div>

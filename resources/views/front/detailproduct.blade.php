@@ -195,10 +195,17 @@
                                 </div>
                                 <div class="action_links">
                                     <ul>
-                                        <li class="add_to_cart"><a href="cart.html" title="Add to cart"><span class="lnr lnr-cart"></span></a></li>
-                                        <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
-                                         <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><span class="lnr lnr-heart"></span></a></li>  
-                                        <li class="compare"><a href="#" title="Add to Compare"><span class="lnr lnr-sync"></span></a></li>
+                                        <li class="add_to_cart"><a href="{{route('cart.add',$product->id)}}" ><span class="lnr lnr-cart"></span></a></li>
+                                        @auth
+                                        <form action="{{route('wishlist.store')}}" method="post" title="Add to Wishlist">
+                                            {{ csrf_field() }}
+                                           <input type="hidden" type="text" name='product_id' value='{{$product->id}}'>
+                                           
+                                           <button  type="submit" title="Add to cart"><span class="lnr lnr-heart"></span></button>
+
+                                        </form>
+                                        @endauth
+                                      
                                     </ul>
                                 </div>
                             </div>

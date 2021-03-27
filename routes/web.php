@@ -24,6 +24,7 @@ Route::get('/', [App\Http\Controllers\LandingPageController::class, 'index'])->n
 Route::get('/contact', [App\Http\Controllers\LandingPageController::class, 'contact'])->name('contact');
 Route::get('/about', [App\Http\Controllers\LandingPageController::class, 'about'])->name('about');
 Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
+
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::post('/storeorder', [App\Http\Controllers\OrderController::class, 'store'])->name('order.store');
 
@@ -46,7 +47,12 @@ Route::delete('/products/{product}', [App\Http\Controllers\ProductController::cl
 Route::put('/products/{product}', [App\Http\Controllers\ProductController::class, 'update'])->name('product.update');
 Route::get('/detail{id}', [App\Http\Controllers\ProductController::class, 'detail'])->name('product.detail');
 
-
+/* ##################################### */
+Route::get('/wishlist', [App\Http\Controllers\WishListController::class, 'index'])->name('wishlist');
+Route::post('/wishlist/store', [App\Http\Controllers\WishListController::class, 'store'])->name('wishlist.store');
+/* ##################################### */
+Route::post('/contact/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
+Route::post('/newsletter', [App\Http\Controllers\ContactController::class, 'newsletter'])->name('newsletter');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

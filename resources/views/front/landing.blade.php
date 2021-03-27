@@ -33,7 +33,7 @@
                             <p>
                                 coopérative argane Mogador, les meilleurs produits de qualités pour votre beauté et votre santé.
                             </p> 
-                            <a href="shop.html">Acheter Maintenant </a>
+                            <a href="{{route("shop.index")}}">Acheter Maintenant </a>
                         </div>
                     </div>
                 </div>
@@ -44,12 +44,12 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="slider_content">
-                            <h1>Onions & Shallots</h1>
-                            <h2>Natural Farm Products</h2>
+                            <h1>Les mellieur Produits</h1>
+                            <h2>Alimontaire, Cosmitique</h2>
                             <p>
-                            Widest range of farm-fresh Vegetables, Fruits & seasonal produce
+                                coopérative argane Mogador, les meilleurs produits de qualités pour votre beauté et votre santé.
                              </p> 
-                            <a href="shop.html">Read more </a>
+                            <a href="{{route("shop.index")}}">Acheter Maintenant </a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,17 @@
                                                 </div> --}}
                                                 <div class="action_links">
                                                     <ul>
-                                                        <li class="add_to_cart"><a href="cart.html" title="Add to cart"><span class="lnr lnr-cart"></span></a></li>
+                                                        <li class="add_to_cart"><a href="{{route('cart.add',$product->id)}}" ><span class="lnr lnr-cart"></span></a></li>
+                                                        @auth
+                                                    <form action="{{route('wishlist.store')}}" method="post" title="Add to Wishlist">
+                                                        {{ csrf_field() }}
+                                                       <input type="hidden" type="text" name='product_id' value='{{$product->id}}'>
+                                                       
+                                                       <button  type="submit" title="Add to FAVORITE"><span class="lnr lnr-heart"></span></button>
+
+                                                    </form>
+                                                    @endauth
+                                                  
                                                     </ul>
                                                 </div>
                                             </div>
@@ -194,7 +204,7 @@
     <!--custom product area end-->
 
      <!--brand area start-->
-    <div class="brand_area">
+  {{--   <div class="brand_area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -218,7 +228,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--brand area end-->
  <!--contact map start-->
  <div class="container-fluid">
