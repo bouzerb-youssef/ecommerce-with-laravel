@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Newsletter;
-
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -37,7 +37,6 @@ class ContactController extends Controller
     public function store(Request $request)
     {
          
-     
             $request->validate([
                 'name' => 'required',
                 'email' => 'required',

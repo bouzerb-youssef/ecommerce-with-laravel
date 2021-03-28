@@ -47,7 +47,7 @@
                                 <article class="single_related">
                                     <figure>
                                         <div class="related_thumb">
-                                            <a href="blog-details.html"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
+                                            <a href="blog-details.html"><img src="{{asset('/storage/'.$item->image)}}"   alt=""></a>
                                         </div>
                                         <figcaption class="related_content">
                                            <h4><a href="{{route("blog.show",$item->slug)}}">{{$item->title}}</a></h4>

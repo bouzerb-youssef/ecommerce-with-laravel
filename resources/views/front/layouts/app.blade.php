@@ -39,7 +39,7 @@
     
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    
+    <link rel="stylesheet" href="{{ asset('assets/css/style2.css') }}">
     <!--modernizr min js here-->
     <script src="{{ asset('assets/js/vendor/modernizr-3.7.1.min.js') }}" defer></script>
     @yield('style')

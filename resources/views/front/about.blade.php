@@ -5,10 +5,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb_content">
-                    <h3>about</h3>
+                    <h3>NOTRE COOPÉRATIVE
+                    </h3>
                     <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li>about</li>
+                        <li><a href="/about">home</a></li>
+                        <li>NOTRE COOPÉRATIVE
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -96,7 +98,7 @@
      <div class="faq-client-say-area">
          <div class="container">   
              <div class="row">
-                 <div class="col-lg-6 col-md-6">
+                 <div class="col-lg-8 col-md-6">
                      <div class="faq-client_title">
                          <h2>Qui sommes-nous ?</h2>
                      </div>
@@ -240,52 +242,10 @@
                      </div>
  
                  </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-4">
                      <!--testimonial area start-->
                      <div class="testimonial_area  testimonial_about">
-                         <div class="section_title">
-                            <h2>What Our Customers Says ?</h2>
-                         </div>
-                         <div class="testimonial_container">
-                             <div class="testimonial_carousel testimonial-two owl-carousel">
-                                 <div class="single_testimonial">
-                                     <div class="testimonial_thumb">
-                                         <a href="#"><img src="assets/img/about/testimonial1.png" alt=""></a>
-                                     </div>
-                                     <div class="testimonial_content">
-                                         <div class="testimonial_icon_img">
-                                             <img src="assets/img/about/testimonials-icon.png" alt="">
-                                         </div>
-                                         <p>I'm so happy with all of the themes, great support, could not wish for more. These people are geniuses! Kudo's from the Netherlands!..</p>
-                                         <a href="#">Lindsy Neloms</a>
-                                     </div>
-                                 </div>
-                                 <div class="single_testimonial">
-                                     <div class="testimonial_thumb">
-                                         <a href="#"><img src="assets/img/about/testimonial2.png" alt=""></a>
-                                     </div>
-                                     <div class="testimonial_content">
-                                         <div class="testimonial_icon_img">
-                                             <img src="assets/img/about/testimonials-icon.png" alt="">
-                                         </div>
-                                         <p>I'm so happy with all of the themes, great support, could not wish for more. These people are geniuses! Kudo's from the Netherlands!..</p>
-                                         <a href="#">Rebecka Filson</a>
-                                     </div>
-                                 </div>
-                                 <div class="single_testimonial">
-                                     <div class="testimonial_thumb">
-                                         <a href="#"><img src="assets/img/about/testimonial3.png" alt=""></a>
-                                     </div>
-                                     <div class="testimonial_content">
-                                         <div class="testimonial_icon_img">
-                                             <img src="assets/img/about/testimonials-icon.png" alt="">
-                                         </div>
-                                         <p>I'm so happy with all of the themes, great support, could not wish for more. These people are geniuses! Kudo's from the Netherlands!..</p>
-                                         <a href="#">Amber Laha</a>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                        <img src="assets/img/about/mogador.jpg"   alt="">
                      </div>
                      <!--testimonial area end-->
                  </div>

@@ -174,7 +174,7 @@
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
+                                    <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}" class="img-fluid" alt="Responsive image" style="height: 200px;"   alt=""></a>
                                 </div>
                                 <figcaption class="blog_content">
                                    <div class="articles_date">

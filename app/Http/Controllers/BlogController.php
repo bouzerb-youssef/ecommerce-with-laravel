@@ -12,7 +12,7 @@ class BlogController extends Controller
 {
     public function index(){
         $products=Product::with('categos')->take(4)->get();
-        $post = Post::with('category')->get();
+        $post = Post::with('category')->paginate(8);
         $categories = Category::get();
         return view('front.blog',compact('products','post','categories'));
     }

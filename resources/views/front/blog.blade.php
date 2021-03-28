@@ -27,7 +27,7 @@
                             <article class="single_blog">
                                 <figure>
                                     <div class="blog_thumb">
-                                        <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
+                                        <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}"  class="img-fluid" alt="Responsive image" style="height: 200px;" alt=""></a>
                                     </div>
                                     <figcaption class="blog_content">
                                         <h4 class="post_title"><a href="{{route("blog.show",$item->slug)}}">Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.</a></h4>
@@ -66,7 +66,7 @@
                         @foreach ($post as $item)
                         <div class="post_wrapper">
                             <div class="post_thumb">
-                                <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
+                                <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}"  alt=""></a>
                             </div>
                             <div class="post_info">
                                 <h4><a href="{{route("blog.show",$item->slug)}}">{{$item->title}}</a></h4>
@@ -92,6 +92,10 @@
         </div>
     </div>
 </div>
+<div class="container">
+    {{$post->links()}}
+</div>
+
 <br><br><br><br><br>
     
 @endsection

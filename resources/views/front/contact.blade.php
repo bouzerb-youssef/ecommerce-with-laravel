@@ -25,7 +25,7 @@
                 <div class="breadcrumb_content">
                     <h3>contact</h3>
                     <ul>
-                        <li><a href="index.html">home</a></li>
+                        <li><a href="/">home</a></li>
                         <li>contact</li>
                     </ul>
                 </div>
@@ -63,12 +63,12 @@
              <div class="row">
                  <div class="col-lg-6 col-md-6">
                     <div class="contact_message content">
-                         <h3>contact us</h3>    
-                          <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas human. qui sequitur mutationem consuetudium lectorum. Mirum est notare quam</p>
+                         <h3>contactez-nous</h3>    
+                          <p>Profitez de notre newsletter pour rester à jour avec les dernières nouvelles et les ventes spéciales. Laissez votre adresse email ici!</p>
                          <ul>
-                             <li><i class="fa fa-fax"></i>  Address : No 40 Baria Sreet 133/2 NewYork City</li>
+                             <li><i class="fa fa-fax"></i>  Address :Située À Centre Rural OUNARA Province D’Essaouira</li>
                              <li><i class="fa fa-phone"></i> <a href="#">Infor@roadthemes.com</a></li>
-                             <li><i class="fa fa-envelope-o"></i><a href="tel:0(1234)567890">0(1234) 567 890</a>  </li>
+                             <li><i class="fa fa-envelope-o"></i><a href="tel:0662-132044">0662-132044</a>  </li>
                          </ul>             
                      </div> 
                  </div>

@@ -1,3 +1,33 @@
+
+ <div class="banner_fullwidth color_two">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="banner_full_content">
+                    <div class="subscribe_form">
+                        <h4>Laissez votre adresse email ici!</h4>
+                       {{--  <p>Profitez de notre newsletter pour rester à jour avec les dernières nouvelles et les ventes spéciales. Laissez votre adresse email ici!</p> --}}
+                        <form action="{{route('newsletter')}}" method="POST">
+                            {{ csrf_field() }}
+                            <input id="mc-email"name='email' type="email" autocomplete="off" placeholder="Enter you email" />
+                            
+                            <button id="mc-submit">Subscribe</button>
+                        </form>
+                        <!-- mailchimp-alerts Start -->
+                        <div class="mailchimp-alerts text-centre">
+                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                        </div><!-- mailchimp-alerts end -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
 <footer class="footer_widgets color_two">
     <div class="footer_top">
         <div class="container">
