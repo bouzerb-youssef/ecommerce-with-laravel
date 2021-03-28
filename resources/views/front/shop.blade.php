@@ -1,5 +1,6 @@
 @extends('front.layouts.app')
 @section('content')
+<br><br><br>
 <!--breadcrumbs area start-->
 @if( session()->has('success'))
 <div class="alert alert-success">{{ session()->get('success') }}</div>
@@ -37,19 +38,7 @@
 
                         <button data-role="grid_list" type="button"  class="btn-list" data-toggle="tooltip" title="List"></button>
                     </div>
-                    <div class=" niceselect_option">
-                        <form class="select_option" action="#">
-                            <select name="orderby" id="short">
-
-                                <option selected value="1">Sort by average rating</option>
-                                <option  value="2">Sort by popularity</option>
-                                <option value="3">Sort by newness</option>
-                                <option value="4">Sort by price: low to high</option>
-                                <option value="5">Sort by price: high to low</option>
-                                <option value="6">Product Name: Z</option>
-                            </select>
-                        </form>
-                    </div>
+                   
                     <div class="page_amount">
                         <p>Showing 1–9 of 21 results</p>
                     </div>
@@ -112,7 +101,15 @@
                                     <ul>
                                         <li class="add_to_cart"><a href="{{route('cart.add',$product->id)}}" title="Add to cart">Add to Cart</a></li>
 {{--                                         <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"> <span class="lnr lnr-magnifier"></span></a></li>
- --}}                                         <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><span class="lnr lnr-heart"></span></a></li>  
+ --}}                                        <li class="wishlist">
+                                                <form action="{{route('wishlist.store')}}" method="post" title="Add to Wishlist">
+                                                    {{ csrf_field() }}
+                                                <input type="hidden" type="text" name='product_id' value='{{$product->id}}'>
+                                                
+                                                <button  type="submit" title="Add to cart"><span class="lnr lnr-heart"></span></button>
+
+                                                </form>
+                                        </li>  
                                         
                                     </ul>
                                 </div>

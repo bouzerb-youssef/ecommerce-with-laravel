@@ -5,7 +5,7 @@
                 <div class="col-lg-4 col-md-12 col-sm-7">
                     <div class="widgets_container contact_us">
                        <div class="footer_logo">
-                           <a href="index.html"><img src="assets/img/logo/logo.png"  width="80" height="80" alt=""></a>
+                           <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png')}}"  width="80" height="80" alt=""></a>
                        </div>
                        <p class="footer_desc">La Coopérative Mogador Est Née En 05-06- 2007 Située À Centre Rural OUNARA Province D’Essaouira</p>
                         <p><span>Address:</span> 4000 Essaouira, Maroc</p>
@@ -34,12 +34,13 @@
                         <h3>Products</h3>
                         <div class="footer_menu">
                             <ul>
-                                <li><a href="#">Brands</a></li>
-                                <li><a href="#">  Gift Certificates</a></li>
-                                <li><a href="#">Affiliate</a></li>
-                                <li><a href="#">Specials</a></li>
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#"> Order History</a></li>
+                                @php
+                                    $products=App\Models\Product::select("name","id")->take("5")->get();
+                               @endphp
+                                    @foreach ($products as $product)
+                                <li><a href="{{route('product.detail',$product->id)}}">{{$product->name}}</a></li>
+                                @endforeach
+                              
                             </ul>
                         </div>
                     </div>

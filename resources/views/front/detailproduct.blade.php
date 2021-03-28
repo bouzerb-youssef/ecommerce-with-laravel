@@ -1,6 +1,21 @@
 @extends('front.layouts.app')
 @section('content')
   <!--product details start-->
+  <div class="breadcrumbs_area">
+    <div class="container">   
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>shop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>         
+</div>
   <div class="product_details mt-70 mb-70">
     <div class="container">
         <div class="row">

@@ -143,7 +143,7 @@
                    </div>
                     <div class="col-lg-4 col-md-3 col-sm-3 col-3">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/img/logo/logo2.png"  width="50" height="50" alt=""></a>
+                            <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png')}}"  width="50" height="50" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-7 col-8">

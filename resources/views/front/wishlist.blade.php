@@ -1,6 +1,21 @@
 @extends('front.layouts.app')
 @section('content')
 <div class="wishlist_area mt-70">
+    <div class="breadcrumbs_area">
+        <div class="container">   
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb_content">
+                        <h3>Shop</h3>
+                        <ul>
+                            <li><a href="index.html">home</a></li>
+                            <li>shop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
     <div class="container">   
         <form action="#"> 
             <div class="row">

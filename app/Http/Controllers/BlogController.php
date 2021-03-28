@@ -15,4 +15,16 @@ class BlogController extends Controller
         //return $post;
         return view('front.blog',compact('products','post'));
     }
+
+
+
+        public function show($slug){
+            $blog = Post::where('slug', '=', $slug)->firstOrFail();
+        return view('front.blogs', compact('blog'));
+
+            
+        }
+
+
+	
 }

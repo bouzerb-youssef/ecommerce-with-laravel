@@ -27,6 +27,7 @@ Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'
 
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::post('/storeorder', [App\Http\Controllers\OrderController::class, 'store'])->name('order.store');
+Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
 
 
 /* ################shop#################### */

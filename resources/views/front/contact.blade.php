@@ -18,6 +18,21 @@
 @endsection
 @section('content')
 <br><br><br>
+<div class="breadcrumbs_area">
+    <div class="container">   
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <h3>contact</h3>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>contact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>         
+</div>
         <div class="container">
             @if( session()->has('success'))
             <div class="alert alert-success">{{ session()->get('success') }}</div>

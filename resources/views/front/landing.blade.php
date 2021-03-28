@@ -178,7 +178,7 @@
                                 </div>
                                 <figcaption class="blog_content">
                                    <div class="articles_date">
-                                         <p>18/01/2019 | <a href="#">{{ $item->title}}</a> </p>
+                                         <p>18/01/2019 | <a href="{{route("blog.show",$item->slug)}}">{{ $item->title}}</a> </p>
                                     </div>
                                     <h4 class="post_title"><a href="blog-details.html">Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.</a></h4>
                                     <footer class="blog_footer">
