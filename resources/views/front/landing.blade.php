@@ -174,15 +174,15 @@
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a href="blog-details.html"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
+                                    <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
                                 </div>
                                 <figcaption class="blog_content">
                                    <div class="articles_date">
-                                         <p>18/01/2019 | <a href="{{route("blog.show",$item->slug)}}">{{ $item->title}}</a> </p>
+                                         <p>{{ $item->created_at }}<a href="{{route("blog.show",$item->slug)}}">{{ $item->title}}</a> </p>
                                     </div>
-                                    <h4 class="post_title"><a href="blog-details.html">Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.</a></h4>
+                                    <h4 class="post_title"><a href="{{route("blog.show",$item->slug)}}">{{ $item->meta_description}}</a></h4>
                                     <footer class="blog_footer">
-                                        <a href="blog-details.html">Voir plus</a>
+                                        <a href="{{route("blog")}}">Voir plus</a>
                                     </footer>
                                 </figcaption>
                             </figure>

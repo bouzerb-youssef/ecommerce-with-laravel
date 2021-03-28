@@ -1,3 +1,5 @@
+
+  
 <div class="off_canvars_overlay">
                 
 </div>
@@ -14,20 +16,8 @@
                     </div>
                     <div class="language_currency">
                         <ul>
-                            <li class="language"><a href="#"> Language <i class="icon-right ion-ios-arrow-down"></i></a>
-                                <ul class="dropdown_language">
-                                    <li><a href="#">French</a></li>
-                                    <li><a href="#">Spanish</a></li>
-                                    <li><a href="#">Russian</a></li>
-                                </ul>
-                            </li>
-                            <li class="currency"><a href="#"> Currency <i class="icon-right ion-ios-arrow-down"></i></a>
-                                <ul class="dropdown_currency">
-                                    <li><a href="#">€ Euro</a></li>
-                                    <li><a href="#">£ Pound Sterling</a></li>
-                                    <li><a href="#">$ US Dollar</a></li>
-                                </ul>
-                            </li>
+                           
+                          
                         </ul>
                     </div>
                     <div class="header_social text-right">
@@ -39,44 +29,19 @@
                             <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
                         </ul>
                     </div>
-                    <div class="search_container">
-                       <form action="#">
-                           <div class="hover_category">
-                                <select class="select_option" name="select" id="categori1">
-                                    <option selected value="1">Select a categories</option>
-                                    <option value="2">Accessories</option>
-                                    <option value="3">Accessories & More</option>
-                                    
-                                </select>                        
-                           </div>
-                            <div class="search_box">
-                                <input placeholder="Search product..." type="text">
-                                 <button type="submit"><span class="lnr lnr-magnifier"></span></button>
-                            </div>
-                        </form>
-                    </div>
+                    
                  
                     <div class="call-support">
                         <p><a href="tel:(08)23456789">(08) 23 456 789</a> Customer Support</p>
                     </div>
                     <div id="menu" class="text-left ">
                         <ul class="offcanvas_main_menu">
-                            <li class="menu-item-has-children active"><a href="{{route("landing")}}">Home</a> </li>
-                            <li class="menu-item-has-children"> <a href="{{route("shop.index")}}">Shop</a>  </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">blog</a>
-
-
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="{{route("about")}}">about Us</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="{{route("contact")}}"> Contact Us</a> 
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="{{route("blog")}}"> Contact Us</a> 
-                            </li>
+                            <li><a class="active"  href="{{route("landing")}}">  ACCUEIL</a> </li>
+                                    <li class="mega_items"><a href="{{route("shop.index")}}">BOUTIQUE</a>  </li>
+                                   
+                                    <li><a href="{{route("contact")}}">CONTACTEZ-NOUS</a></li>                                
+                                    <li><a href="{{route("about")}}"> NOTRE COOPÉRATIVE</a></li>
+                                    <li><a href="{{route("blog")}}">blog</a></li>
                                 </ul>
                     </div>
                     <div class="offcanvas_footer">
@@ -97,20 +62,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="language_currency">
                             <ul>
-                                <li class="language"><a href="#"> Language <i class="icon-right ion-ios-arrow-down"></i></a>
-                                    <ul class="dropdown_language">
-                                        <li><a href="#">French</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                        <li><a href="#">Russian</a></li>
-                                    </ul>
-                                </li>
-                                <li class="currency"><a href="#"> Currency <i class="icon-right ion-ios-arrow-down"></i></a>
-                                    <ul class="dropdown_currency">
-                                        <li><a href="#">€ Euro</a></li>
-                                        <li><a href="#">£ Pound Sterling</a></li>
-                                        <li><a href="#">$ US Dollar</a></li>
-                                    </ul>
-                                </li>
+                              
                             </ul>
                         </div>
                     </div>
@@ -249,7 +201,6 @@
                                         <div class="cart_button">
                                             <a href="checkout.html"><i class="fa fa-sign-in"></i> Checkout</a>
                                         </div>
-
                                     </div>
                                 </div> --}}
                                 <!--mini cart end-->
@@ -286,4 +237,5 @@
     </div> 
 </header>
 <!--header area end-->
+
 

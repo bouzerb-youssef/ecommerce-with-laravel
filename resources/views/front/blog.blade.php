@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb_content">
-                    <h3>Shop</h3>
+                    <h3>blog</h3>
                     <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li>shop</li>
+                        <li><a href="/">home</a></li>
+                        <li>blog</li>
                     </ul>
                 </div>
             </div>
@@ -27,10 +27,10 @@
                             <article class="single_blog">
                                 <figure>
                                     <div class="blog_thumb">
-                                        <a href="blog-details.html"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
+                                        <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
                                     </div>
                                     <figcaption class="blog_content">
-                                        <h4 class="post_title"><a href="blog-details.html">Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.</a></h4>
+                                        <h4 class="post_title"><a href="{{route("blog.show",$item->slug)}}">Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.</a></h4>
                                         <div class="articles_date">
                                             @if ( !$item->category_id==null )
                                             <p> <a href="#">{{ $item->category['name']}}</a> </p>
@@ -58,100 +58,40 @@
                             <button type="submit">search</button>
                         </form>
                     </div>
-                    <div class="widget_list comments">
-                       <div class="widget_title">
-                            <h3>Recent Comments</h3>
-                        </div>
-                        <div class="post_wrapper">
-                            <div class="post_thumb">
-                                <a href="blog-details.html"><img src="assets/img/blog/comment2.png.jpg" alt=""></a>
-                            </div>
-                            <div class="post_info">
-                                <span> <a href="#">demo</a> says:</span>
-                                <a href="blog-details.html">Quisque semper nunc</a>
-                            </div>
-                        </div>
-                         <div class="post_wrapper">
-                            <div class="post_thumb">
-                                <a href="blog-details.html"><img src="assets/img/blog/comment2.png.jpg" alt=""></a>
-                            </div>
-                            <div class="post_info">
-                                <span><a href="#">admin</a> says:</span>
-                                <a href="blog-details.html">Quisque orci porta...</a>
-                            </div>
-                        </div>
-                        <div class="post_wrapper">
-                            <div class="post_thumb">
-                                <a href="blog-details.html"><img src="assets/img/blog/comment2.png.jpg" alt=""></a>
-                            </div>
-                            <div class="post_info">
-                                <span><a href="#">demo</a> says:</span>
-                                <a href="blog-details.html">Quisque semper nunc</a>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="widget_list widget_post">
                         <div class="widget_title">
                             <h3>Recent Posts</h3>
                         </div>
+                        @foreach ($post as $item)
                         <div class="post_wrapper">
                             <div class="post_thumb">
-                                <a href="blog-details.html"><img src="assets/img/blog/blogs1.jpg" alt=""></a>
+                                <a href="{{route("blog.show",$item->slug)}}"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
                             </div>
                             <div class="post_info">
-                                <h4><a href="blog-details.html">Blog image post</a></h4>
-                                <span>March 16, 2018 </span>
+                                <h4><a href="{{route("blog.show",$item->slug)}}">{{$item->title}}</a></h4>
+                                <span>{{$item->created_at}} </span>
                             </div>
                         </div>
-                         <div class="post_wrapper">
-                            <div class="post_thumb">
-                                <a href="blog-details.html"><img src="assets/img/blog/blogs2.jpg" alt=""></a>
-                            </div>
-                            <div class="post_info">
-                                <h4><a href="blog-details.html">Post with Gallery</a></h4>
-                                <span>March 16, 2018 </span>
-                            </div>
-                        </div>
-                         <div class="post_wrapper">
-                            <div class="post_thumb">
-                                <a href="blog-details.html"><img src="assets/img/blog/blogs3.jpg" alt=""></a>
-                            </div>
-                            <div class="post_info">
-                                <h4><a href="blog-details.html">Post with Audio</a></h4>
-                                <span>March 16, 2018 </span>
-                            </div>
-                        </div>
+                        @endforeach
+                        
                     </div>
                     <div class="widget_list widget_categories">
                         <div class="widget_title">
                             <h3>Categories</h3>
                         </div>
                         <ul>
-                            <li><a href="#">Audio</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Image</a></li>
-                            <li><a href="#">Other</a></li>
-                            <li><a href="#">Travel</a></li>
+                            @foreach ($categories as $item)
+                            <li><a href="#">{{ $item->name}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
-                    <div class="widget_list widget_tag">
-                        <div class="widget_title">
-                            <h3>Tag products</h3>
-                        </div>
-                        <div class="tag_widget">
-                            <ul>
-                                <li><a href="#">asian</a></li>
-                                <li><a href="#">brown</a></li>
-                                <li><a href="#">euro</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
-<br><br><br>
+<br><br><br><br><br>
     
 @endsection

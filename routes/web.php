@@ -54,7 +54,7 @@ Route::post('/wishlist/store', [App\Http\Controllers\WishListController::class, 
 /* ##################################### */
 Route::post('/contact/store', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 Route::post('/newsletter', [App\Http\Controllers\ContactController::class, 'newsletter'])->name('newsletter');
-
+// date::28/03/2021 14:36
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
