@@ -23,10 +23,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb_content">
-                    <h3>contact</h3>
+                    <h3>contactez-nous</h3>
                     <ul>
                         <li><a href="/">home</a></li>
-                        <li>contact</li>
+                        <li>contactez-nous</li>
                     </ul>
                 </div>
             </div>

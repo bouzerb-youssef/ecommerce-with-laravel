@@ -24,10 +24,12 @@ Route::get('/', [App\Http\Controllers\LandingPageController::class, 'index'])->n
 Route::get('/contact', [App\Http\Controllers\LandingPageController::class, 'contact'])->name('contact');
 Route::get('/about', [App\Http\Controllers\LandingPageController::class, 'about'])->name('about');
 Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
-
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog');
 Route::post('/storeorder', [App\Http\Controllers\OrderController::class, 'store'])->name('order.store');
 Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
+ Route::get('/llogin', function () {
+    return view('front.login');
+}); 
 
 
 /* ################shop#################### */

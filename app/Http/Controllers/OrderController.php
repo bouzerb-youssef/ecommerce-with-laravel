@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use App\Models\orderitem;
+use App\Models\Items;
 use App\Models\Order;
 use App\Models\Cart;
 class OrderController extends Controller
@@ -60,7 +60,7 @@ class OrderController extends Controller
             
         foreach ( content()->items as $item ) {
 
-                    $product= orderitem::create([
+                    $product= Items::create([
                                  'order_id' => $order->id,
                                  'product_id' => $item['id'],
                                  'quantity' => $item['qty'],

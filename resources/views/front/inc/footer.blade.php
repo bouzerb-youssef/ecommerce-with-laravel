@@ -11,7 +11,7 @@
                             {{ csrf_field() }}
                             <input id="mc-email"name='email' type="email" autocomplete="off" placeholder="Enter you email" />
                             
-                            <button id="mc-submit">Subscribe</button>
+                            <button id="mc-submit" type='submit'>Subscribe</button>
                         </form>
                         <!-- mailchimp-alerts Start -->
                         <div class="mailchimp-alerts text-centre">

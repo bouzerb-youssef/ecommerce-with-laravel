@@ -15,7 +15,17 @@
  }
 </style>
 @section('content')
-   
+
+<!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
     <!--header area start-->
     
     <!--offcanvas menu area start-->
@@ -88,7 +98,7 @@
                                     <article class="single_product">
                                         <figure>
                                             <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img src="{{asset('/storage/'.$product->image)}}" alt=""></a>
+                                                <a class="primary_img" href="{{route("product.detail",$product->id)}}"><img src="{{asset('/storage/'.$product->image)}}" alt=""></a>
                                                 
                                                {{--  <div class="label_product">
                                                     <span class="label_sale">Sale</span>
@@ -111,8 +121,15 @@
                                                 </div>
                                             </div>
                                             <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">{{$product->name}}</a></h4>
+                                                <h4 class="product_name"><a href="{{route("product.detail",$product->id)}}">{{$product->name}}</a></h4>
+                                                @if ($product->catego_id =null)
+                                             
                                                 <p><a href="#">{{$product->categos->name}}</a></p>
+                                                @endif
+                                                <p><a href="#">category</a></p>
+                                                
+                                                
+                                                
                                                 <div class="price_box"> 
                                                     <span class="current_price">{{$product->price}} MAD</span>
                                                     
@@ -240,7 +257,8 @@
     <!--footer area start-->
   
     <!--footer area end-->
-   
-   
+    <script>
+    
+    </script>
     
 @endsection

@@ -1,6 +1,20 @@
 @extends('front.layouts.app')
 @section('content')
-
+<div class="breadcrumbs_area">
+    <div class="container">   
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <h3>blog</h3>
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li>blog</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>         
+</div>
 <div class="blog_details">
     <div class="container">
         <div class="row">
@@ -21,7 +35,7 @@
                            <figcaption class="blog_content">
                                 <div class="post_content">
                                    <div>
-                                    {{$blog->body}}
+                                    {!!$blog->body!!}
                                    </div>
                                 </div>
                                 

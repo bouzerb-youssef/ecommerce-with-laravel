@@ -12,7 +12,7 @@
                 <div class="breadcrumb_content">
                     <h3>Shop</h3>
                     <ul>
-                        <li><a href="index.html">home</a></li>
+                        <li><a href="/">home</a></li>
                         <li>shop</li>
                     </ul>
                 </div>
@@ -51,8 +51,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
                         <div class="single_product">
                             <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="{{asset('/storage/'.$product->image)}}" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="{{asset('/storage/'.$product->image)}}" alt=""></a>
+                                    <a class="primary_img" href="{{route("product.detail",$product->id)}}"><img src="{{asset('/storage/'.$product->image)}}" alt=""></a>
                                     <div class="label_product">
                                         {{-- <span class="label_sale">Sale</span>
                                         <span class="label_new">New</span> --}}
@@ -84,7 +83,7 @@
                                     <p><a href="#">{{-- {{$product->categos->name}} --}}</a></p>
                                     <div class="price_box"> 
                                         <span class="current_price">{{$product->price}} MAD</span>
-                                        <span class="old_price">{{$product->price}}</span>
+                                       
                                     </div>
                                 </div>
                             <div class="product_content list_content">
@@ -92,7 +91,7 @@
                                 <p><a href="#">{{-- {{$product->categos->name}} --}}</a></p>
                                 <div class="price_box"> 
                                     <span class="current_price">{{$product->price}} MAD</span>
-                                    <span class="old_price">{{$product->price}} MAD</span>
+                                    
                                 </div>
                                 <div class="product_desc">
                                     <p>{{$product->description}}</p>

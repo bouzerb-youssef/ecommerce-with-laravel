@@ -8,7 +8,7 @@
                 <div class="breadcrumb_content">
                    <h3>Checkout</h3>
                     <ul>
-                        <li><a href="index.html">home</a></li>
+                        <li><a href="/">home</a></li>
                         <li>Checkout</li>
                     </ul>
                 </div>
@@ -74,7 +74,7 @@
                                     <input type="text" name="Email"> 
 
                                 </div> 
-                                <div class="container"><button type="submit" class="btn btn-success">submit</button></div> 
+                                <div class="container"><button type="submit" class="btn btn-success">Passer un order</button></div> 
                                 <div class="col-12 mb-20">
                                     
 
@@ -90,7 +90,7 @@
                         </form>    
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <form action="#">    
+                        <form action="">    
                             <h3>votre order</h3> 
                             <div class="order_table table-responsive">
                                 <table>

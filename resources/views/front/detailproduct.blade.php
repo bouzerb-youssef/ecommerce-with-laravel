@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb_content">
-                    <h3>Shop</h3>
+                    <h3>produit</h3>
                     <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li>shop</li>
+                        <li><a href="/">home</a></li>
+                        <li>produit</li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                                <li><a href="#"><i class="icon-star"></i></a></li>
                                <li><a href="#"><i class="icon-star"></i></a></li>
                                <li><a href="#"><i class="icon-star"></i></a></li>
-                                <li class="review"><a href="#"> (customer review ) </a></li>
+                                
                             </ul>
                             
                         </div>
@@ -100,9 +100,7 @@
                             <li >
                                 <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">Description</a>
                             </li>
-                            <li>
-                               <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews (1)</a>
-                            </li>
+                            
                         </ul>
                     </div>
                     <div class="tab-content">
@@ -114,66 +112,7 @@
                         </div>
                         
 
-                        <div class="tab-pane fade" id="reviews" role="tabpanel" >
-                            <div class="reviews_wrapper">
-                                <h2>1 review for Donec eu furniture</h2>
-                                <div class="reviews_comment_box">
-                                    <div class="comment_thmb">
-                                        <img src="assets/img/blog/comment2.jpg" alt="">
-                                    </div>
-                                    <div class="comment_text">
-                                        <div class="reviews_meta">
-                                            <div class="star_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="icon-star"></i></a></li>
-                                                   <li><a href="#"><i class="icon-star"></i></a></li>
-                                                   <li><a href="#"><i class="icon-star"></i></a></li>
-                                                   <li><a href="#"><i class="icon-star"></i></a></li>
-                                                   <li><a href="#"><i class="icon-star"></i></a></li>
-                                                </ul>   
-                                            </div>
-                                            <p><strong>admin </strong>- September 12, 2018</p>
-                                            <span>roadthemes</span>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="comment_title">
-                                    <h2>Add a review </h2>
-                                    <p>Your email address will not be published.  Required fields are marked </p>
-                                </div>
-                                <div class="product_ratting mb-10">
-                                   <h3>Your rating</h3>
-                                    <ul>
-                                        <li><a href="#"><i class="icon-star"></i></a></li>
-                                           <li><a href="#"><i class="icon-star"></i></a></li>
-                                           <li><a href="#"><i class="icon-star"></i></a></li>
-                                           <li><a href="#"><i class="icon-star"></i></a></li>
-                                           <li><a href="#"><i class="icon-star"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="product_review_form">
-                                    <form action="#">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <label for="review_comment">Your review </label>
-                                                <textarea name="comment" id="review_comment" ></textarea>
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6">
-                                                <label for="author">Name</label>
-                                                <input id="author"  type="text">
-
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6">
-                                                <label for="email">Email </label>
-                                                <input id="email"  type="text">
-                                            </div>  
-                                        </div>
-                                        <button type="submit">Submit</button>
-                                     </form>   
-                                </div> 
-                            </div>     
-                        </div>
+                        
                     </div>
                 </div>     
             </div>
@@ -205,8 +144,7 @@
                             <div class="product_thumb">
                                 <a class="primary_img" href="product-details.html"><img src="{{asset('/storage/'.$item->image)}}" alt=""></a>
                                 <div class="label_product">
-                                    <span class="label_sale">Sale</span>
-                                    <span class="label_new">New</span>
+                                   
                                 </div>
                                 <div class="action_links">
                                     <ul>

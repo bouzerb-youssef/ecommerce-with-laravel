@@ -15,8 +15,8 @@
     <!-- CSS 
     ========================= -->
     <!--bootstrap min css-->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <!--owl carousel min css-->
+   <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+   <!--owl carousel min css-->
     <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
     <!--slick min css-->
     <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
@@ -41,7 +41,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style2.css') }}">
     <!--modernizr min js here-->
-    <script src="{{ asset('assets/js/vendor/modernizr-3.7.1.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/vendor/modernizr-3.7.1.min.js') }}" ></script>
+    {{--  --}}
     @yield('style')
 </head>
 

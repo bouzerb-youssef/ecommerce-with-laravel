@@ -39,8 +39,9 @@
                             <li><a class="active"  href="{{route("landing")}}">  ACCUEIL</a> </li>
                                     <li class="mega_items"><a href="{{route("shop.index")}}">BOUTIQUE</a>  </li>
                                    
-                                    <li><a href="{{route("contact")}}">CONTACTEZ-NOUS</a></li>                                
+                                                                  
                                     <li><a href="{{route("about")}}"> NOTRE COOPÉRATIVE</a></li>
+                                    <li><a href="{{route("contact")}}">CONTACTEZ-NOUS</a></li>  
                                     <li><a href="{{route("blog")}}">blog</a></li>
                                 </ul>
                     </div>
@@ -83,26 +84,19 @@
         <div class="header_middle header_middle2">
             <div class="container">
                 <div class="row align-items-center">
-                   <div class="col-lg-4 col_search">
-                       <div class="search_container mobail_s_none">
-                            <form action="#">
-                                <div class="search_box">
-                                    <input placeholder="Search here..." type="text">
-                                     <button type="submit"><span class="lnr lnr-magnifier"></span></button>
-                                </div>
-                            </form>
-                        </div>
-                   </div>
+                   
                     <div class="col-lg-4 col-md-3 col-sm-3 col-3">
                         <div class="logo">
-                            <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png')}}"  width="50" height="50" alt=""></a>
+                            <a href="index.html"><img src="{{ asset('assets/img/logo/logo.png')}}"  width="70" height="70" alt=""></a>
                         </div>
                     </div>
+                    <a class="nav-link" href="/llogin">{{ __('Login') }}</a>
                     <div class="col-lg-4 col-md-6 col-sm-7 col-8">
                         <div class="header_account_area">
                             <div class="header_account_list register">
                                 <ul>
                                     @guest
+
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

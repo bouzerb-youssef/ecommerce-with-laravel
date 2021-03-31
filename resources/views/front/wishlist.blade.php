@@ -6,10 +6,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb_content">
-                        <h3>Shop</h3>
+                        <h3>wishlist</h3>
                         <ul>
-                            <li><a href="index.html">home</a></li>
-                            <li>shop</li>
+                            <li><a href="/">home</a></li>
+                            <li>wishlist</li>
                         </ul>
                     </div>
                 </div>
